@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    
+<input 
+    type ="number"  
+    id="source_number" 
+    value="" 
+    placeholder="Enter a number"
+>
+<button id="double_button">Double</button>
+
+<!-- <div id="output_results">click double to see results here</div> -->
+<input 
+    id="output_results" 
+    readonly="readonly" 
+    placeholder="click button to see results"
+>
+
+</body>
+<script>
+    function doubleMe(){
+        let result = parseFloat(source_number.value); 
+        // output_results.innerHTML = result * 2;
+        output_results.value = result * 2;
+    }
+    double_button.onclick = doubleMe;
+
+</script>
+</html>
